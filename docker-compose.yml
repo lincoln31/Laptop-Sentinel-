@@ -1,0 +1,21 @@
+services:
+  camera-app:
+    build: .
+    container_name: camera_streaming_app
+    ports:
+      - "5000:5000"
+    devices:
+      - /dev/video0:/dev/video0
+    volumes:
+      - ./recordings:/app/recordings
+      - ./templates:/app/templates
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TAILSCALE_IP=100.104.196.10 
+    restart: unless-stopped
+    networks:
+      - camera-network
+    
+networks:
+  camera-network:
+    driver: bridge

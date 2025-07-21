@@ -1,0 +1,28 @@
+# Archivos de entorno y configuración local
+.env
+*.env.*
+
+# Dependencias y caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.venv/
+pip-wheel-metadata/
+build/
+dist/
+*.egg-info/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Grabaciones de video (¡MUY IMPORTANTE!)
+# No quieres llenar tu repositorio con archivos de video pesados.
+/recordings/
+
+# Archivos de IDEs
+.vscode/
+.idea/
